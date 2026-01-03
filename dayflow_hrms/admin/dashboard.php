@@ -1,0 +1,4 @@
+<?php include("header.php"); ?>
+<div class="container">
+<h2>Admin Dashboard</h2>
+</div>

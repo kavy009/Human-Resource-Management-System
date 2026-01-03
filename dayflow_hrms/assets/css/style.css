@@ -1,0 +1,256 @@
+/* =========================================================
+   DAYFLOW HRMS - FUTURISTIC UI CSS
+   ========================================================= */
+
+/* ---------- CSS VARIABLES ---------- */
+:root {
+    --primary: #6c63ff;
+    --secondary: #00e5ff;
+    --dark: #1e293b;
+    --light: #f8fafc;
+    --glass: rgba(255, 255, 255, 0.75);
+    --border-glass: rgba(255, 255, 255, 0.25);
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ---------- RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BODY ---------- */
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #c7d2fe, #e0e7ff, #f8fafc);
+    color: var(--dark);
+    min-height: 100vh;
+}
+
+/* ---------- CONTAINER ---------- */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: var(--glass);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--border-glass);
+    border-radius: 18px;
+    box-shadow: var(--shadow-soft);
+    animation: fadeIn 0.6s ease;
+}
+
+/* ---------- LOGIN BOX ---------- */
+.login-box {
+    max-width: 420px;
+    margin-top: 90px;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 22px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+/* ---------- NAVBAR ---------- */
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary), #4f46e5);
+    padding: 16px;
+    border-radius: 14px;
+    margin: 20px;
+    box-shadow: 0 8px 20px rgba(108,99,255,0.35);
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background: rgba(255,255,255,0.2);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+}
+
+/* ---------- FORMS ---------- */
+form label {
+    font-weight: 600;
+    color: #334155;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 18px;
+    border-radius: 10px;
+    border: 1px solid #cbd5f5;
+    font-size: 14px;
+    background: rgba(255,255,255,0.85);
+    transition: all 0.25s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(108,99,255,0.2);
+    outline: none;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    background: linear-gradient(135deg, var(--primary), #4f46e5);
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(108,99,255,0.45);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+/* ---------- DASHBOARD CARDS ---------- */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 22px;
+}
+
+.card {
+    background: linear-gradient(160deg, #ffffff, #f1f5ff);
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.18);
+}
+
+.card a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* ---------- TABLES ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 22px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+table th {
+    background: linear-gradient(135deg, var(--primary), #4f46e5);
+    color: #fff;
+    padding: 14px;
+    font-weight: 500;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+table tr:hover {
+    background: #eef2ff;
+}
+
+/* ---------- STATUS BADGES ---------- */
+.badge {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.badge-present { background: #22c55e; }
+.badge-absent  { background: #ef4444; }
+.badge-leave   { background: #f59e0b; }
+.badge-pending { background: #0ea5e9; }
+
+/* ---------- ALERTS ---------- */
+.success, .error {
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.4s ease;
+}
+
+.success {
+    background: #22c55e;
+    color: #fff;
+}
+
+.error {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    margin: 24px;
+    padding: 14px;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: #cbd5e1;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 22px;
+    }
+}
